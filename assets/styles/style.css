@@ -73,11 +73,12 @@ label {
     font-size: 1.2em;
 }
 
-#bandeira {
+.bandeira {
     position: absolute;
     bottom: 15px;
     right: 15px;
     height: 60px;
+    filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.401));
 }
 
 #chip {
@@ -134,4 +135,35 @@ label {
     letter-spacing: 5px;
     padding: 5px;
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.401);
+}
+
+#tarja {
+    width: 100%;
+    position: absolute;
+    top: 30px;
+    height: 65px;
+    background-color: rgb(33, 33, 33);
+}
+
+#back p {
+    position: absolute;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.401);
+    padding: 5px;
+    font-size: 1.5em;
+    width: 90%;
+    background-color: #FFFFFC;
+    bottom: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: end;
+}
+
+#back h1 {
+    position: absolute;
+    padding: 5px;
+    font-weight: 500;
+    font-size: 1.5em;
+    font-weight: 400;
+    top: 85px;
 }

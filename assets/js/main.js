@@ -1,6 +1,7 @@
 const card = document.querySelector('#card');
 const submit = document.querySelector('#sub');
 const bandeira = document.querySelectorAll('.bandeira');
+const nomebandeira = document.querySelector('#front > h1');
 
 const inputNum = document.querySelector('#num');
 const inputVal = document.querySelector('#val');
@@ -21,10 +22,12 @@ inputNum.addEventListener('input', () => {
     cardnum.innerHTML = inputNum.value;
     cardnum.innerHTML == '' ? cardnum.innerHTML = '•••• •••• •••• ••••' : undefined;
     if (inputNum.value[0] == 4) {
+        nomebandeira.innerHTML = 'Visa';
         bandeira.forEach((e) => {
             e.src = 'assets/images/visa.png'
         }) 
     } else {
+        nomebandeira.innerHTML = 'MasterCard';
         bandeira.forEach((e) => {
             e.src = 'assets/images/mastercard.png'
         }) 

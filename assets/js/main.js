@@ -1,4 +1,5 @@
 const card = document.querySelector('#card');
+const submit = document.querySelector('#sub');
 const bandeira = document.querySelectorAll('.bandeira');
 
 const inputNum = document.querySelector('#num');
@@ -28,22 +29,36 @@ inputNum.addEventListener('input', () => {
             e.src = 'assets/images/mastercard.png'
         }) 
     }
+    isFull();
 })
 
 inputVal.addEventListener('input', () => {
     card.classList.add('flip');
     cardval.innerHTML = inputVal.value;
     cardval.innerHTML == '' ? cardval.innerHTML = '••/••' : undefined;
+    isFull();
 })
 
 inputName.addEventListener('input', () => {
     card.classList.add('flip');
     cardname.innerHTML = inputName.value;
     cardname.innerHTML == '' ? cardname.innerHTML = 'Nome no cartão' : undefined;
+    isFull();
 })
 
 inputCvv.addEventListener('input', () => {
     card.classList.remove('flip');
     cardcvv.innerHTML = inputCvv.value;
     cardcvv.innerHTML == '' ? cardcvv.innerHTML = '•••' : undefined;
+    isFull();
 })
+
+submit.addEventListener("click", (e) => {
+    e.preventDefault()
+})
+
+function isFull() {
+    if (inputCvv.value.length == 3 && inputNum.value.length == (4*4+3) && inputVal.value.length == 5 && inputName.value) {
+        submit.style.display = 'block';
+    }
+}

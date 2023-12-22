@@ -167,3 +167,21 @@ label {
     font-weight: 400;
     top: 85px;
 }
+
+#sub {
+    display: none;
+    border: none; 
+    position: absolute;
+    padding: 10px 30px;
+    background-color: #376f3a;
+    color: #FFFFFC;
+    font-weight: 500;
+    font-size: 1.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.411);
+    top: 500px;
+    cursor: pointer;
+} 

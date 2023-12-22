@@ -20,4 +20,118 @@ body {
 .container {
     background-color: #FFFFFC;
     padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+}
+
+.face {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(145deg, #B8CDF8, #6a7da2);
+    position: absolute;
+    border-radius: 20px;
+    border: 3px solid #6a7da2;
+}
+
+#front {
+    transform: rotateY(180deg);
+}
+
+.flip {
+    transform: rotateY(180deg);
+}
+
+#back {
+    backface-visibility: hidden;
+}
+
+#card {
+    transition: .5s;
+    width: 450px;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+input {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid black;
+    font-size: 1em;
+}
+
+label {
+    font-size: 1.2em;
+}
+
+#bandeira {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    height: 60px;
+}
+
+#chip {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    top: 35%;
+    left: 50px;
+}
+
+#chip > i {
+    font-size: 20px;
+    transform: rotatez(90deg);
+    color: #FFFFFC;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.401);
+}
+
+#card h1 {
+    margin: 15px 0 0 25px;
+    color: #FFFFFC;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.401);
+    font-size: 1.75em;
+    font-weight: 600;
+}
+
+#number {
+    color: #FFFFFC;
+    position: absolute;
+    font-size: 1.5em;
+    left: 45px;
+    bottom: 90px;
+    letter-spacing: 5px;
+    padding: 5px;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.401);
+}
+
+#name {
+    color: #FFFFFC;
+    position: absolute;
+    bottom: 10px;
+    font-size: 1.5em;
+    padding: 5px;   
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.401);
+    font-size: 1.2em;
+    left: 25px;
+}
+
+#front > small {
+    color: #FFFFFC;
+    position: absolute;
+    bottom: 60px;
+    left: 45px;
+    letter-spacing: 5px;
+    padding: 5px;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.401);
 }
